@@ -115,7 +115,7 @@ function flipACoin(call) {
   let currentCoin = coinFlip();
   let status;
 
-  if (currentCoin = call) {
+  if (currentCoin == call) {
     status = "win";
   } else {
     status = "lose";

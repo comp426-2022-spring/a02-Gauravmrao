@@ -1,10 +1,13 @@
-import {coinFlip, coinFlips, countFlips, flipACoin} from '/home/runner/work/a02-Gauravmrao/a02-Gauravmrao/modules/coin.mjs';
+import {flipACoin} from './modules/coin.mjs';
 
-// import {coinFlip, coinFlips, countFlips, flipACoin} from '/Users/grao2/Documents/UNC Chapel Hill/Sophomore Year Classwork/Spring Semester/comp426/a02-Gauravmrao/modules/coin.mjs';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 
-let guessInput = process.argv.slice(2);
+let guessInput = require('minimist')(process.argv.slice(2));
+// console.log(process.argv);
+// console.log(guessInput.call);
 
-let guessCoin = guessInput[0];
+let guessCoin = guessInput.call;
 
 if (guessCoin == 'heads' || guessCoin == 'tails') {
     console.log(flipACoin(guessCoin));
