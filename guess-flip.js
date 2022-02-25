@@ -9,10 +9,12 @@ if (inputData.length < 3) {
 
     let guessCoin = guessInput[0];
     
-    if (guessCoin != "heads" && guessCoin != "tails") {
+    if (guessCoin == "heads") {
+        console.log(flipACoin(guessCoin));
+    } else if (guessCoin == "tails") {
+        console.log(flipACoin(guessCoin));
+    } else {
         console.log("Error: no input.");
         console.log("Usage: node guess-flip --call=[heads|tails])");
-    } else {
-        console.log(flipACoin(guessCoin));
     }
 }
