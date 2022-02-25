@@ -4,11 +4,11 @@ import {coinFlip, coinFlips, countFlips, flipACoin} from '/home/runner/work/a02-
 // import {coinFlip, coinFlips, countFlips, flipACoin} from '/Users/grao2/Documents/UNC Chapel Hill/Sophomore Year Classwork/Spring Semester/comp426/a02-Gauravmrao/modules/coin.mjs';
 
 
-let inputArray = process.argv;
-let flipsInput = inputArray[2];
-let numFlips = flipsInput.slice(9);
+let flipsInput = process.argv.slice(2);
+let numFlips = flipsInput.match(/\d+/);
 
-// --number=10
+// --number=10 -> index 9
+
 
 if (numFlips >= 0) {
     let coins = coinFlips(numFlips);
