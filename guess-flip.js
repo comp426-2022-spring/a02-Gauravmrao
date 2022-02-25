@@ -1,7 +1,7 @@
 import {coinFlip, coinFlips, countFlips, flipACoin} from '/home/runner/work/a02-Gauravmrao/a02-Gauravmrao/modules/coin.mjs';
 
 let inputData = process.argv;
-if (inputData.length < 3) {
+if (inputData.length < 2) {
     console.log("Error: no input.");
     console.log("Usage: node guess-flip --call=[heads|tails])");
 } else {
@@ -9,12 +9,12 @@ if (inputData.length < 3) {
 
     let guessCoin = guessInput[0];
     
-    if (guessCoin == "heads") {
-        console.log(flipACoin(guessCoin));
-    } else if (guessCoin == "tails") {
-        console.log(flipACoin(guessCoin));
-    } else {
+    if (guessCoin != "heads" && guessCoin != "tails") {
         console.log("Error: no input.");
         console.log("Usage: node guess-flip --call=[heads|tails])");
+    } else {
+        console.log(flipACoin(guessCoin));
     }
 }
+
+
