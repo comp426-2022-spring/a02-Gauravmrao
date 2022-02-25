@@ -6,7 +6,7 @@ import {coinFlip, coinFlips, countFlips, flipACoin} from '/home/runner/work/a02-
 
 let inputArray = process.argv;
 let flipsInput = inputArray[2];
-let numFlips = flipsInput.replace( /^\D+/g, '');
+let numFlips = flipsInput.match(/\d+/);
 
 
 if (numFlips >= 0) {
