@@ -16,8 +16,8 @@
 
 function coinFlip() {
   let coinValue;
-  let coinNum = Math.floor(Math.random() * 2);
-  if (coinNum = 0) {
+  let coinNum = Math.random();
+  if (coinNum < 0.5 ) {
     coinValue = "heads";
   } else {
     coinValue = "tails";
@@ -47,11 +47,11 @@ function coinFlip() {
  */
 
 function coinFlips(flips) {
-  const flips = [];
+  const flippies = [];
   for (let i = 0; i < flips; i ++) {
-    flips.push(coinFlip())
+    flippies.push(coinFlip())
   }
-  return flips;
+  return flippies;
 }
 
 /** Count multiple flips
@@ -113,4 +113,4 @@ function flipACoin(call) {
  * Export all of your named functions
 */
 
-export { coinFlip, coinFlips, countFlips, flipACoin};
+export {coinFlip, coinFlips, countFlips, flipACoin};
