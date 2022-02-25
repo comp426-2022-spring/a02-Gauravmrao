@@ -6,8 +6,9 @@ import {coinFlip, coinFlips, countFlips, flipACoin} from '/home/runner/work/a02-
 
 let inputArray = process.argv;
 let flipsInput = inputArray[2];
-let numFlips = flipsInput.match(/\d+/);
+let numFlips = flipsInput.slice(9);
 
+// --number=10
 
 if (numFlips >= 0) {
     let coins = coinFlips(numFlips);
